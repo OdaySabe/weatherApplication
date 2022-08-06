@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <input id="city" type="text" placeholder="City"><i id="search" onclick="handleSearch()" class="fa fa-search" style="font-size:24px; color: white;"></i>
+    <div id="templatecontainer"></div>
+    <script id="template" type="text/x-handlebars-template">
+        
+       {{#each this}}
+       {{#each this}}
+       <div class="content">
+       <i onclick=deleteCity(this) data-name={{name}} class="fa fa-minus-circle" style="font-size:34px;color: #902D41;"></i>
+       <div>
+        <button onclick="update(this)" data-name={{name}}>Update</button>
+       <h3>{{temperature}} <sup>O</sup></h3>
+       <h3 class="city">{{name}}</h3>
+       </div>
+       <div>
+       <img src={{conditionPic}}>
+       <h3>{{condition}}</h3>
+       </div>
+       </div>
+       {{/each}}
+       {{/each}}
+    </script>
+
+    <script id="template2" type="text/x-handlebars-template">
+        
+        {{#each this}}
+        {{#each this}}
+        <div class="content">
+        <i onclick=sendCity(this) data-name={{name}} class="fa fa-plus-circle" style="font-size:34px;color: #404E4D;"></i>
+        <div>
+         <button onclick="update(this)" data-name={{name}}>Update</button>
+        <h3>{{temperature}} <sup>O</sup></h3>
+        <h3 class="city">{{name}}</h3>
+        </div>
+        <div>
+        <img src={{conditionPic}}>
+        <h3>{{condition}}</h3>
+        </div>
+        </div>
+        {{/each}}
+        {{/each}}
+     </script>
+    
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="handlebars/dist/handlebars.js"></script>
+    <script src="TempManager.js"></script>
+    <script src="Render.js"> </script>
+    <script src="main.js"></script>
+</body>
+</html>

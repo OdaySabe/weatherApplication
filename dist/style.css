@@ -1,0 +1,36 @@
+#city{
+    border: 0px;
+    border-bottom:solid white 2px;
+    background-color: #2B84EF;
+    width: 300px;
+    color: white;
+    font-size: x-large;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+body{
+    background-color: #2B84BF;
+    font-family: sans-serif;
+}
+.content>*{
+
+    font-size: x-large;
+    color: white;
+
+}
+.content{
+    border-bottom: 3px solid lightblue;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: baseline;
+}
+.city{
+    font-size: large;
+}
+button{
+    background-color: lightblue;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: medium;
+}
