@@ -21,7 +21,7 @@ function Render(cityData, boolFromDataBase) {
       );
     } else {
       $(element).replaceWith(
-        `<i onclick=sendCity(this) ${$(element).data(
+        `<i onclick=sendCity(this) data-name=${$(element).data(
           "name"
         )} class="fa fa-plus-circle" style="font-size:34px;color: black;"></i>`
       );
